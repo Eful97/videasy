@@ -1,0 +1,17 @@
+{
+  "name": "stremio-videasy-ita",
+  "version": "1.0.0",
+  "description": "Addon Stremio — Videasy ITA, stream diretti nel player nativo",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "stremio-addon-sdk": "^1.6.10",
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
