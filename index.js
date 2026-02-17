@@ -25,6 +25,11 @@ const LANG = 'it';
 // ---------------------------------------------------------------
 // MANIFEST
 // ---------------------------------------------------------------
+// Su Koyeb (e altri host) l'URL pubblico è diverso da localhost.
+// Se imposti la variabile d'ambiente PUBLIC_URL su Koyeb,
+// il manifest la userà come base URL.
+const PUBLIC_URL = process.env.PUBLIC_URL || `http://127.0.0.1:${PORT}`;
+
 const manifest = {
   id: 'com.mio.videasy.ita',
   version: '1.0.0',
@@ -138,7 +143,7 @@ console.log('╠═════════════════════�
 console.log(`║  ✅ Server avviato sulla porta ${PORT}           ║`);
 console.log('║                                              ║');
 console.log('║  📡 Installa in Stremio con questo URL:      ║');
-console.log(`║  http://127.0.0.1:${PORT}/manifest.json         ║`);
+console.log(`║  ${(PUBLIC_URL + '/manifest.json').padEnd(44)}║`);
 console.log('║                                              ║');
 console.log(`║  ${tmdbStatus.padEnd(44)}║`);
 console.log('╚══════════════════════════════════════════════╝');
